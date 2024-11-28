@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title> Bookmark</title>
+</head>
+<body> 
+
+    
+            <div class="title d-flex justify-content-center align-content-center flex-column text-center">
+                <h1>Bookmarker</h1>
+           </div>
+    <div class="container">
+
+        <div class="dashed"></div>
+        <div class="title-2 d-flex justify-content-center align-content-center flex-column text-center"">
+            <h2><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+        </div>
+       
+          
+        <div class="site-name w-100 d-flex flex-column justify-content-center">
+            <label for="bookmarkName" class="pb-2 fw-semibold"><i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label>
+            <input type="text" placeholder="Bookmark Name" class="form-control" oninput="nameValidation()"  id="bookmarkName">
+          </div>
+          <br>
+
+          <div class="site-url w-100 d-flex flex-column justify-content-center">
+            <label for="bookmarkURL" class="pb-2 fw-semibold"> <i class="fa-solid fa-link pe-2"></i> Site URL</label>
+            <input type="url" placeholder="Website URL" class="form-control" oninput="urlValidation()" id="bookmarkURL">
+          </div>
+        <div class="d-flex justify-content-center align-content-center text-center mt-5">
+            <button onclick="addBookmark()" class="btn btn-submit" id="submitBtn">Submit</button>
+        </div>  
+        <div class="dashed mt-5"></div>
+  
+                <!-- <input type="text" class=" form-control my-4" id="serachInput" oninput="searchfun(this.value)"> -->
+                 <br>
+                 <br>
+                <div class="row" id="data">
+                    <table class=" text-center py-4">
+                        <thead>
+                            <tr>
+                            <th>index</th>
+                            <th>Website Name</th>
+                            <th>Visit</th>
+                            <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            
+                        </tbody>
+                    </table>
+        
+                </div>
+        
+            </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
